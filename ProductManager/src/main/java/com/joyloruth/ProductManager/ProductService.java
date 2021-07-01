@@ -20,17 +20,18 @@ public class ProductService {
 	private ProductRepo repo;
 	
 	
+	//returns list of all products
 	public List<Product> listAll(){
 		return repo.findAll();
-		
 	}
 	
+	//save product to database
 	public void save(Product product) {
 		repo.save(product);
 	}
 	
 	public Product get(Long id) {
-		return repo.getById(id);
+		return repo.findById(id).get();
 	}
 	
 	public void delete(Long id) {
