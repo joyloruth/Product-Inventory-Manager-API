@@ -7,18 +7,22 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author Joy LoRuth
  *
  */
 @Entity
+@Table(name="product")
 public class Product {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String brand;
-	private String madeIn;
+	private String made;
 	private float price;
 	
 	protected Product(){
@@ -28,8 +32,7 @@ public class Product {
 	/**
 	 * @return the id
 	 */
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	public Long getId() {
 		return id;
 	}
@@ -72,15 +75,15 @@ public class Product {
 	/**
 	 * @return the madeIn
 	 */
-	public String getMadeIn() {
-		return madeIn;
+	public String getMade() {
+		return made;
 	}
 
 	/**
 	 * @param madeIn the madeIn to set
 	 */
-	public void setMadeIn(String madeIn) {
-		this.madeIn = madeIn;
+	public void setMade(String madeIn) {
+		this.made = madeIn;
 	}
 
 	/**
