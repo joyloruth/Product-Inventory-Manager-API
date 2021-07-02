@@ -13,6 +13,7 @@ import javax.persistence.Table;
  * @author Joy LoRuth
  *
  */
+
 @Entity
 @Table(name="product")
 public class Product {

@@ -1,6 +1,5 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeLeaf.org" lang="en">
-  
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,7 +15,7 @@
 	 
 
 
-	<nav class="navbar navbar-light navbar-expand-lg "style="background-color: #B7A6CE ;">
+	<nav class="navbar navbar-light navbar-expand-lg "style="background-color: #210349;">
   <a class="navbar-brand" href="#">IMango</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -50,22 +49,22 @@
     
     <table class="table table-hover table-dark table-bordered table-striped ">
   <thead>
-    <tr>
-      <th scope="col">Product Id</th>
-      <th scope="col">Name</th>
-      <th scope="col">Brand</th>
-      <th scope="col">Price</th>
-      <th scope="col">Actions</th>
-      
-		    </tr>
-		  </thead>
+	    <tr>
+	      <th scope="col">Product Id</th>
+	      <th scope="col">Name</th>
+	      <th scope="col">Brand</th>
+	      <th scope="col">Price</th>
+	      <th scope="col">Actions</th>
+		</tr>
+	</thead>
 		  <tbody>
-		   	<tr th:each="product: ${ListProducts}">
-					  		<td th:text="$(product.id)">Product ID</td>
-					  		<td th:text="$(product.name)">Name</td>
-					  		<td th:text="$(product.brand)">Brand</td>
-					  		<td th:text="$(product.made)">Country</td>
-					  		<td th:text="$(product.price)">Price</td>
+				 <tr th:each="product: ${ListProducts}">
+					<td th:text="$(product.id)">Product ID</td>
+					<td th:text="$(product.name)">Name</td>
+					<td th:text="$(product.brand)">Brand</td>
+					<td th:text="$(product.made)">Country</td>
+					<td th:text="$(product.price)">Price</td>
+
 		  </tbody>
 		</table>
     </div>
