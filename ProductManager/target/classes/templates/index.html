@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html xmlns:th="http://www.thymeLeaf.org" lang="en">
+  
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,16 +11,42 @@
 
     <title>Product Manager</title>
   </head>
-  <body style="background-color:powderblue;">
+  <body style="background-color:#210349;">
+  
+	 
+
+
+	<nav class="navbar navbar-light navbar-expand-lg "style="background-color: #B7A6CE ;">
+  <a class="navbar-brand" href="#">IMango</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="#" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="#">
+        <a class="#" href="#">Add a Product</a>
+      </li>
+      <li class="nav-item">
+        <a class="#" href="#">Pricing</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      Here for all of your managing needs
+    </span>
+  </div>
+</nav>
+
   
   	
   	<div align="center">
-    <h1>Product Manager</h1>
-  
-    <h3 >Manages grocery inventory</h3>
-    
     <div class = "container">
     
+    <h1 style="font-family:'Verdana'; color:white; "> Product Inventory Manager.</h1>
+    <h3 style="font-family:'Courier New'; color:white; font-size: 20px; ">Manages Grocery Store Product Inventory.</h3>
+   
     
     <table class="table table-hover table-dark table-bordered table-striped ">
   <thead>
@@ -33,23 +60,12 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-		   	 <tr>
-		      <th scope="row">234751</th>
-		      <td>Mark</td>
-		      <td>Otto</td>
-		      <td>@mdo</td>
-		    </tr>
-		    <tr>
-		      <th scope="row">278098</th>
-		      <td>Jacob</td>
-		      <td>Thornton</td>
-		      <td>@fat</td>
-		    </tr>
-		    <tr>
-		      <th scope="row">3</th>
-		      <td colspan="2">Larry the Bird</td>
-		      <td>@twitter</td>
-		    </tr>
+		   	<tr th:each="product: ${ListProducts}">
+					  		<td th:text="$(product.id)">Product ID</td>
+					  		<td th:text="$(product.name)">Name</td>
+					  		<td th:text="$(product.brand)">Brand</td>
+					  		<td th:text="$(product.made)">Country</td>
+					  		<td th:text="$(product.price)">Price</td>
 		  </tbody>
 		</table>
     </div>
