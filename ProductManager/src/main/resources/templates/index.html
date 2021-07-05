@@ -1,21 +1,23 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Product Manager</title>
-  </head>
-  <body style="background-color:#210349;">
-  
-	 
+
+<title>Product Manager</title>
+
+</head>
+<body style="background-color:#210349;">
 
 
-	<nav class="navbar navbar-light navbar-expand-lg "style="background-color: #B190DD;">
+   
+   	<nav class="navbar navbar-light navbar-expand-lg "style="background-color: #B190DD;">
   <a class="navbar-brand" href="#">IMango</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -23,7 +25,7 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="#" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="#" href="/new">Create New Product <span class="sr-only">(current)</span></a>
       </li>
       <li class="#">
         <a class="#" href="#">Add a Product</a>
@@ -37,39 +39,47 @@
     </span>
   </div>
 </nav>
-
-  
-  	
-  	<div align="center">
-    <div class = "container">
-    
-    <h1 style="font-family:'Verdana'; color:white; "> Product Inventory Manager.</h1>
-    <h3 style="font-family:'Courier New'; color:white; font-size: 20px; ">Manages Grocery Store Product Inventory.</h3>
    
-    
-    <table class="table table-hover table-dark table-bordered table-striped ">
-  <thead>
-	    <tr>
-	      <th scope="col">Product Id</th>
-	      <th scope="col">Name</th>
-	      <th scope="col">Brand</th>
-	      <th scope="col">Price</th>
-	      <th scope="col">Actions</th>
-		</tr>
-	</thead>
-		  <tbody>
-				 <tr th:each="product: ${ListProducts}">
-					<td th:text="$(product.id)">Product ID</td>
-					<td th:text="$(product.name)">Name</td>
-					<td th:text="$(product.brand)">Brand</td>
-					<td th:text="$(product.made)">Country</td>
-					<td th:text="$(product.price)">Price</td>
+<div class = "container">
 
-		  </tbody>
-		</table>
-    </div>
-  	</div>
-   </body>
+   <div align="center">   
+   
+     <h1 style="font-family:'Verdana'; color:white; "> Product Inventory List</h1>
+    <a href="/new">Create New Product</a>
+    <br/><br/>
+    <table class="table table-hover table-dark table-bordered table-striped " border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Made In</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${listProducts}">
+                <td th:text="${product.id}">Product ID</td>
+                <td th:text="${product.name}">Name</td>
+                <td th:text="${product.brand}">Brand</td>
+                <td th:text="${product.made}">Made in</td>
+                <td th:text="${product.price}">Price</td>
+                <td>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
 </html>
 
 

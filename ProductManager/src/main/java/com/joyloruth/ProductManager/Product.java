@@ -3,33 +3,48 @@
  */
 package com.joyloruth.ProductManager;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 /**
  * @author Joy LoRuth
  *
  */
 
-
-//@Table(name="product")
 @Entity
+//@Table(name="product")
 public class Product {
 	
-	//@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String name;
-	private String brand;
-	private String made;
-	private float price;
 	
-	protected Product(){
+	private long id;
+	
+	//@Column(name ="name")
+	private String name;
+	//@Column(name ="brand")
+	private String brand;
+	//@Column(name ="made")
+	private String made;
+	//@Column(name ="price")
+	private float price;
+
+	protected Product() {
 		
 	}
+	
+	/*public Product(String name, String brand, String made, float price) {
+		super();
+		this.name = name;
+		this.brand = brand;
+		this.made = made;
+		this.price = price;
+	}*/
+	
+	
 
 	/**
 	 * @return the id
