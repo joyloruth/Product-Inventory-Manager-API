@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
 
 <!-- BOOTSTRAP ---------------------------------------------------------------------------------------->
@@ -21,8 +22,10 @@
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 	    <div class="navbar-nav">
-	     <a class="nav-item nav-link" href="/">VIEW INVENTORY</a>
-	     <a class="nav-item nav-link active" href="/new">ADD a PRODUCT <span class="sr-only">(current)</span></a>
+	     <a class="nav-item nav-link active" href="/home">OVERVIEW</a>
+	     <a class="nav-item nav-link" href="/viewInventory">VIEW INVENTORY</a>
+	     <a class="nav-item nav-link active" href="/addProduct">ADD A PRODUCT</a>
+	     <a class="nav-item nav-link active" href="/editProduct">EDIT A PRODUCT</a><span class="sr-only">(current)</span>
 	     <a class="nav-item nav-link" href="#">DELETE A PRODUCT</a>
 	    </div>
 	  </div>
@@ -31,37 +34,6 @@
 
 
 
-<!-- ADD A PRODUCT FORM--------------------------------------------------------------------------------------->
-
-	<form>
-	<div class = "container">
-	  <div class="form-row">
-	    <div class="form-group col-md-4">
-	      <label for="inputEmail4">Id</label>
-	      <input type="email" class="form-control" id="inputEmail4" placeholder="product id">
-	    </div>
-	    <div class="form-group col-md-6">
-	      <label for="inputPassword4">Name</label>
-	      <input type="password" class="form-control" id="inputPassword4" placeholder="name">
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <label for="inputAddress">Brand</label>
-	    <input type="text" class="form-control" id="inputAddress" placeholder="brand">
-	  </div>
-	  <div class="form-group">
-	    <label for="inputAddress2">Country</label>
-	    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-	  </div>
-	   <div class="form-group col-md-2">
-	    <label for="inputZip">Zip</label>
-	    <input type="text" class="form-control" id="inputZip">
-	   </div>
-	  </div>
-	 </div>
-	  <button type="submit" class="btn btn-primary">Add Product to Inventory</button>
-	</form>
-	</div>
 
 
 

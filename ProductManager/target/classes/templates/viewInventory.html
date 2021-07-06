@@ -3,19 +3,20 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
 
-<meta charset="utf-8">
+<!-- BOOTSTRAP CSS ---------------------------------------------------------------------------------------->
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><title>Add a New Product to the Inventory</title>
 
-<title>Product Manager</title>
+
+<title>View Inventory List</title>
 
 </head>
 
 <body style="background-color:#210349;">
 
-
+<!-- NAVIGATION BAR ---------------------------------------------------------------------------------------->
    
 <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #762EDC;">
   <a class="navbar-brand" href="#">IManga</a>
@@ -25,10 +26,10 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
     
-      
+      <a class="nav-item nav-link active" href="/home">OVERVIEW</a>
       <a class="nav-item nav-link active" href="/"> VIEW INVENTORY <span class="sr-only">(current)</span></a>
-    <a class="nav-item nav-link" href="/new">ADD A PRODUCT</a>
-      
+      <a class="nav-item nav-link" href="/addProduct">ADD A PRODUCT</a>
+      <a class="nav-item nav-link active" href="/editProduct">EDIT A PRODUCT</a>
       <a class="nav-item nav-link" href="/home">DELETE A PRODUCT</a>
       
     </div>
