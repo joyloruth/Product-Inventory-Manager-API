@@ -3,52 +3,74 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
 
-<!-- BOOTSTRAP CSS ---------------------------------------------------------------------------------------->
-	<meta charset="utf-8">
+ <title>Add A Product</title>
+     
+<!------ Required meta tags-------------------------------->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><title>Add a New Product to the Inventory</title>
 
+<!-- Bootstrap CSS ---------------------------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<title>View Inventory List</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-</head>
-
-<body style="background-color:#210349;">
+<body>
 
 <!-- NAVIGATION BAR ---------------------------------------------------------------------------------------->
    
-<nav class="navbar navbar-light navbar-expand-lg" style="background-color: #762EDC;">
-  <a class="navbar-brand" href="#">IManga</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">IMango</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-    
-      <a class="nav-item nav-link active" href="/home">OVERVIEW</a>
-      <a class="nav-item nav-link active" href="/"> VIEW INVENTORY <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/addProduct">ADD A PRODUCT</a>
-      <a class="nav-item nav-link active" href="/editProduct">EDIT A PRODUCT</a>
-      <a class="nav-item nav-link" href="/home">DELETE A PRODUCT</a>
-      
-    </div>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">Overview <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/viewInventory">View Inventory</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Product Actions
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/addProduct">Add Product</a>
+          <a class="dropdown-item" href="/editProduct">Edit Product</a>
+          <a class="dropdown-item" href="/deleteProduct">Delete Product</a>
+        </div>
+      </li>
+    </ul>
   </div>
 </nav>
 
 
+<div class="row">
+  <div class="col-lg-10">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Product Inventory</h4>
+        <p class="card-text">eZoo is a JavaEE MVC application designed to manage a virtual zoo’s animals and Feeding schedules via an user interface for employees. Used the CRUD methods to create, retrieve, update and delete items to and from the database.</p>
+        <p><b>Java,PostgreSQL, HTML, CSS,WildFlyBoss, Bootstrap</b></p>
+        <a href="#" class="btnJava btn-primary">View Project</a>
+      </div>
+    </div>
+  </div>
 
-
-   
-<div class = "container">
+</div>
 
    <div align="center">   
    
-     <h1 style="font-family:'Verdana'; color:white; "> Product Inventory List</h1>
+    <h1 style="font-family:'Verdana'; color:rgb(0, 64, 128); "> Product Inventory List</h1>
     <a href="/new">Create New Product</a>
     <br/><br/>
-    <table class="table table-hover table-dark table-bordered table-striped " border="1" cellpadding="10">
-        <thead>
+    
+    
+   <table class="table table-striped">
+  <thead class="thead-dark">
             <tr>
                 <th>Product ID</th>
                 <th>Name</th>
@@ -74,6 +96,12 @@
     
 </div>
 </div>
+
+<nav class="footerbar fixed-bottom navbar-light bg-light">
+  <a class="navbar-brand" href="#">  <Copyright> Copyright(C) 2021</Copyright>
+  
+</nav>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
